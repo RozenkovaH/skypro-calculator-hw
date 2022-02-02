@@ -8,17 +8,17 @@ import pro.sky.skyprocalculatorhw.service.CalculatorService;
 public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
-    public int getSum(int num1, int num2) {
+    public double getSum(double num1, double num2) {
         return num1 + num2;
     }
 
     @Override
-    public int getDifference(int num1, int num2) {
+    public double getDifference(double num1, double num2) {
         return num1 - num2;
     }
 
     @Override
-    public int getProduct(int num1, int num2) {
+    public double getProduct(double num1, double num2) {
         return num1 * num2;
     }
 

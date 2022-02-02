@@ -23,17 +23,17 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String showSum(@RequestParam int num1, @RequestParam int num2) {
+    public String showSum(@RequestParam double num1, @RequestParam double num2) {
         return num1 + " + " + num2 + " = " + calculatorService.getSum(num1, num2);
     }
 
     @GetMapping("/minus")
-    public String showDiff(@RequestParam int num1, @RequestParam int num2) {
+    public String showDiff(@RequestParam double num1, @RequestParam double num2) {
         return num1 + " - " + num2 + " = " + calculatorService.getDifference(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String showProduct(@RequestParam int num1, @RequestParam int num2) {
+    public String showProduct(@RequestParam double num1, @RequestParam double num2) {
         return num1 + " * " + num2 + " = " + calculatorService.getProduct(num1, num2);
     }
 
