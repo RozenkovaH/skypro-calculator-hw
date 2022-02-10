@@ -1,10 +1,11 @@
 package pro.sky.skyprocalculatorhw.service;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import pro.sky.skyprocalculatorhw.service.impl.CalculatorServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorServiceImplTest {
 
@@ -89,11 +90,12 @@ public class CalculatorServiceImplTest {
         assertEquals(expected, actual);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test()
     public void getRatioDivisionByZero() {
         double num1 = 100;
         double num2 = 0;
-
-        out.getRatio(num1, num2);
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class,
+                () -> out.getRatio(num1, num2)
+        );
     }
 }
