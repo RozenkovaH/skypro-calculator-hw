@@ -39,10 +39,6 @@ public class CalculatorController {
 
     @GetMapping("/divide")
     public String showRatio(@RequestParam double num1, @RequestParam double num2) {
-        try {
-            return num1 + " / " + num2 + " = " + calculatorService.getRatio(num1, num2);
-        } catch (IllegalArgumentException e) {
-            return e.getMessage();
-        }
+        return num1 + " / " + num2 + " = " + calculatorService.getRatio(num1, num2);
     }
 }
